@@ -32,7 +32,7 @@
 				implemented ito the document automatically. #### -->	
 				
 <!-- #### (5) who is the author of this library?  edit value.  #### -->
-	<property name="author" value="Christopher Peplin"/>
+	<property name="author" value="Christopher Peplin, chris.peplin@rhubarbtech.com"/>
 	
 <!-- #### (6) which copyright?  edit value.  #### -->
 	<property name="copyright" value="(c) 2009, GNU General Public License"/>
