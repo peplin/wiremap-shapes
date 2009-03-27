@@ -44,7 +44,7 @@
 	<property name="versionNumber"  value="0.1"/>
 	
 <!-- #### (9) your contact url. edit value. #### -->
-	<property name="yourLink"  value="http://rhubarbtech.com/software/wiremaplib" />
+	<property name="yourLink"  value="http://rhubarbtech.com/software" />
 	
 <!-- #### (10) a comma separated list of keywords describing your library. edit value. #### -->
 	<property name="keywords"  value="wiremap graphics convert transformation" />
@@ -60,8 +60,8 @@
 	
 <!-- #### (14) where can the source code be found? edit value. #### -->
 	<property name="source:host"  value="google code" />
-	<property name="source:url"  value="http://code.google.com/p/wiremapLibrary" />
-	<property name="source:repository"  value="http://code.google.com/p/wiremapLibrary/source/browse/" />
+	<property name="source:url"  value="http://code.google.com/p/wiremaplibrary" />
+	<property name="source:repository"  value="http://code.google.com/p/wiremaplibrary/source/browse/" />
 
 
 

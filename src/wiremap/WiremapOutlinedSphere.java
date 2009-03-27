@@ -1,7 +1,5 @@
 package wiremap;
 
-import processing.core.*;
-
 public class WiremapOutlinedSphere extends WiremapSphere {
     private int mOutlineThickness;
     private int mOutlineColor;

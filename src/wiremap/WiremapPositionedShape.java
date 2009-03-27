@@ -1,7 +1,5 @@
 package wiremap;
 
-import processing.core.*;
-
 public abstract class WiremapPositionedShape extends WiremapShape {
     protected int mX;
     protected int mY;

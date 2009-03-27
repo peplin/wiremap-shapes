@@ -1,7 +1,5 @@
 package wiremap;
 
-import processing.core.*;
-
 public class WiremapSphere extends WiremapPositionedShape {
     protected int mRadius;
 

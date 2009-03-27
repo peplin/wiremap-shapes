@@ -1,7 +1,5 @@
 package wiremap;
 
-import processing.core.*;
-
 public abstract class WiremapShape {
     protected Wiremap mMap;
     protected int mBaseColor;

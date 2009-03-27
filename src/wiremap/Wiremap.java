@@ -10,7 +10,6 @@ import processing.core.*;
 public class Wiremap {
     private PApplet mParent;
     private int mWireCount;
-    private int mDepthThickness;
     private int mDepth;
     private int mMaplineLength;
     private int mHeight;
@@ -34,12 +33,11 @@ public class Wiremap {
         }
     }
 
-    public Wiremap(PApplet parent, int wireCount, int depth, int depthThickness,
+    public Wiremap(PApplet parent, int wireCount, int depth,
             int height, int mapline, double depthUnit, double maplineUnit,
             int pixelsPerWire, String wireDepthsFile) {
         mParent = parent;
         mWireCount = wireCount;
-        mDepthThickness = depthThickness;
         mDepth = depth;
         mHeight = height;
         mMaplineLength = mapline;

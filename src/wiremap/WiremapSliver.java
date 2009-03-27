@@ -1,6 +1,5 @@
 package wiremap;
 
-import processing.core.*;
 
 public class WiremapSliver extends WiremapShape {
     private int mWire;

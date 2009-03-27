@@ -1,15 +1,11 @@
 package wiremap;
 
-import processing.core.*;
-
 public class WiremapRectangle extends WiremapPositionedShape {
     protected int mWidth;
     protected int mHeight;
     protected int mDepth;
     protected int mBorderHeight;
     protected int mBorderColor;
-
-    private int[][] mCornerPositions = new int[8][3];
 
     /**
      * z >= 0, z <= mDepthThickness

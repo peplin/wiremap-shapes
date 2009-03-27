@@ -1,7 +1,5 @@
 package wiremap;
 
-import processing.core.*;
-
 public class WiremapGlowingSphere extends WiremapSphere {
     private int mCoreColor;
     private final int COLOR_STEPS = 16;
