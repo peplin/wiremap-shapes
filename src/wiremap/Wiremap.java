@@ -17,6 +17,7 @@ public class Wiremap {
     private double mMaplineUnit;
     private int mPixelsPerWire;
     private int mPixelsPerInch;
+    private int mMaximumDepth;
 
     private int[] mWireDepths;
     private int[] mWireX;
@@ -30,6 +31,9 @@ public class Wiremap {
             double hyp = Math.sqrt(Math.pow(base, 2) + Math.pow(mDepth, 2));
             mWireZ[i] = (int)(mDepth - (mWireDepths[i] * mDepthUnit));
             mWireX[i] = (int)(base - (base * mWireDepths[i] / hyp * mDepthUnit));
+            if(mWireDepths[i] > mMaximumDepth) {
+                mMaximumDepth = mWireDepths[i];
+            }
         }
     }
 
@@ -85,6 +89,14 @@ public class Wiremap {
 
     public int getWireZ(int wire) {
         return mWireZ[wire];
+    }
+    
+    public int getMaximumDepth() {
+        return mMaximumDepth;
+    }
+    
+    public int getWireDepth(int wire) {
+        return mWireDepths[wire];
     }
 
     public void rect(int x, int y, int z, int width, int height, int depth) {

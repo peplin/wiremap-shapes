@@ -7,8 +7,8 @@ WiremapOutlinedSphere outlinedSphere;
 void setup() {
     size(1024, 768);
 
-    map = new Wiremap(this, 128, 70, 20, 24, 32, .25, .25, 7,
-            "depth128.txt");
+    map = new Wiremap(this, 256, 90, 36, 48, .1875, .1875, 4,
+            "depth256.txt");
 
     outlinedSphere = new WiremapOutlinedSphere(
             map, 500, 200, 5, color(180, 90, 45), 5, 15,
