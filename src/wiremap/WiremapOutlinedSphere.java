@@ -21,7 +21,7 @@ public class WiremapOutlinedSphere extends WiremapSphere {
     private void displayOutline() {
         for (int i = 0; i < mMap.getWireCount(); i++) {
             // if a wire's x coord is close enough to the globe's center
-            if((mMap.getWireX(i) >= (mX - mRadius))
+            if(mMap.getWireDepth(i) >= 0 && (mMap.getWireX(i) >= (mX - mRadius))
                     && (mMap.getWireX(i) <= (mX + mRadius))) {
                 // find the distance from the wire to the globe's center
                 double local_hyp =

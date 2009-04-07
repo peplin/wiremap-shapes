@@ -22,7 +22,8 @@ public class WiremapRectangle extends WiremapPositionedShape {
         mMap.getParent().pushMatrix();
         for (int i = 0; i < mMap.getWireCount(); i++) {
             // if a wire's x coord is close enough to the globe's center
-            if((mMap.getWireX(i) >= (mX - mWidth / 2))
+            if(mMap.getWireDepth(i) >= 0 && 
+                    (mMap.getWireX(i) >= (mX - mWidth / 2))
                     && (mMap.getWireX(i) <= (mX + mWidth / 2))) {
                 double distanceToCenter =
                         Math.sqrt(Math.pow(mMap.getWireX(i) - mX, 2)

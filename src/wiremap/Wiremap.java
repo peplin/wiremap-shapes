@@ -27,12 +27,17 @@ public class Wiremap {
         String lines[] = mParent.loadStrings(wireDepthsFile);
         for(int i = 0; i < mWireCount; i++) {
             mWireDepths[i] = Integer.valueOf(lines[i]);
-            float base = (float)(-mMaplineLength / 2 + i * mMaplineUnit);
-            double hyp = Math.sqrt(Math.pow(base, 2) + Math.pow(mDepth, 2));
-            mWireZ[i] = (int)(mDepth - (mWireDepths[i] * mDepthUnit));
-            mWireX[i] = (int)(base - (base * mWireDepths[i] / hyp * mDepthUnit));
-            if(mWireDepths[i] > mMaximumDepth) {
-                mMaximumDepth = mWireDepths[i];
+            if(mWireDepths[i] >= 0) {
+                float base = (float)(-mMaplineLength / 2 + i * mMaplineUnit);
+                double hyp = Math.sqrt(Math.pow(base, 2) + Math.pow(mDepth, 2));
+                mWireZ[i] = (int)(mDepth - (mWireDepths[i] * mDepthUnit));
+                mWireX[i] = (int)(base - (base * mWireDepths[i] / hyp * mDepthUnit));
+                if(mWireDepths[i] > mMaximumDepth) {
+                    mMaximumDepth = mWireDepths[i];
+                }
+            } else {
+                mWireZ[i] = -1;
+                mWireX[i] = -1;
             }
         }
     }
@@ -97,13 +102,5 @@ public class Wiremap {
     
     public int getWireDepth(int wire) {
         return mWireDepths[wire];
-    }
-
-    public void rect(int x, int y, int z, int width, int height, int depth) {
-
-    }
-
-    public void line(int x1, int y1, int z1, int x2, int y2, int z2) {
-
     }
 }
