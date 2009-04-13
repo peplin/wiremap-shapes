@@ -4,12 +4,12 @@ import wiremap.WiremapLighthouse;
 Wiremap map;
 WiremapLighthouse lighthouse;
 
-float rotation = 0;
+float rotation = .02;
 
 void setup() {
     size(1024, 768);
 
-    map = new Wiremap(this, 256, 90, 36, 48, .1875, .1875, 4,
+    map = new Wiremap(this, 256, 90, 36, 36, 48, .1875, .1875, 4,
             "depth256.txt");
 
     lighthouse = new WiremapLighthouse(map, mouseX, mouseY, 10, color(265, 120, 45),
@@ -22,7 +22,5 @@ void draw() {
     lighthouse.setPosition(mouseX, mouseY, 10);
     lighthouse.rotate(rotation);
     lighthouse.display();
-    
-    rotation += .02;
 }
 
