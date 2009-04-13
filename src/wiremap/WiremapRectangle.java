@@ -1,17 +1,18 @@
 package wiremap;
 
 public class WiremapRectangle extends WiremapPositionedShape {
-    protected int mWidth;
-    protected int mHeight;
-    protected int mDepth;
+    protected float mWidth;
+    protected float mHeight;
+    protected float mDepth;
     protected int mBorderHeight;
     protected int mBorderColor;
 
     /**
      * z >= 0, z <= mDepthThickness
      */
-    public WiremapRectangle(Wiremap map, int x, int y, int z, int baseColor,
-            int width, int height, int depth, int borderHeight, int borderColor) {
+    public WiremapRectangle(Wiremap map, float x, float y, float z,
+            int baseColor, float width, float height, float depth,
+            int borderHeight, int borderColor) {
         super(map, x, y, z, baseColor);
         setSize(width, height, depth);
         setBorderHeight(borderHeight);
@@ -20,10 +21,9 @@ public class WiremapRectangle extends WiremapPositionedShape {
 
     public void display() {
         mMap.getParent().pushMatrix();
-        for (int i = 0; i < mMap.getWireCount(); i++) {
-            // if a wire's x coord is close enough to the globe's center
-            if(mMap.getWireDepth(i) >= 0 && 
-                    (mMap.getWireX(i) >= (mX - mWidth / 2))
+        for(int i = 0; i < mMap.getWireCount(); i++) {
+            if(mMap.getWireDepth(i) >= 0
+                    && (mMap.getWireX(i) >= (mX - mWidth / 2))
                     && (mMap.getWireX(i) <= (mX + mWidth / 2))) {
                 double distanceToCenter =
                         Math.sqrt(Math.pow(mMap.getWireX(i) - mX, 2)
@@ -52,7 +52,7 @@ public class WiremapRectangle extends WiremapPositionedShape {
         mMap.getParent().popMatrix();
     }
 
-    public void setSize(int width, int height, int depth) {
+    public void setSize(float width, float height, float depth) {
         mWidth = width;
         mHeight = height;
         mDepth = depth;

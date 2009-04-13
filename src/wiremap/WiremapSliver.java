@@ -3,7 +3,7 @@ package wiremap;
 
 public class WiremapSliver extends WiremapShape {
     private int mWire;
-    private int mStartingHeight;
+    private int mStartingHeight; // these coords are in Processing format
     private int mHeight;
     private int mCapHeight;
     private int mCapColor;

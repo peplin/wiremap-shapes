@@ -4,8 +4,8 @@ public class WiremapOutlinedSphere extends WiremapSphere {
     private int mOutlineThickness;
     private int mOutlineColor;
 
-    public WiremapOutlinedSphere(Wiremap map, int x, int y, int z,
-            int baseColor, int radius, int outlineThickness, int outlineColor) {
+    public WiremapOutlinedSphere(Wiremap map, float x, float y, float z,
+            int baseColor, float radius, int outlineThickness, int outlineColor) {
         super(map, x, y, z, baseColor, radius);
         setOutlineThickness(outlineThickness);
         setOutlineColor(outlineColor);

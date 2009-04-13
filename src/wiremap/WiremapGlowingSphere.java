@@ -4,15 +4,15 @@ public class WiremapGlowingSphere extends WiremapSphere {
     private int mCoreColor;
     private final int COLOR_STEPS = 16;
 
-    public WiremapGlowingSphere(Wiremap map, int x, int y, int z,
-            int baseColor, int radius, int coreColor) {
+    public WiremapGlowingSphere(Wiremap map, float x, float y, float z,
+            int baseColor, float radius, int coreColor) {
         super(map, x, y, z, baseColor, radius);
         setCoreColor(coreColor);
     }
 
     public void display() {
         mMap.getParent().pushMatrix();
-        final int baseRadius = mRadius;
+        final float baseRadius = mRadius;
         final int baseColor = mBaseColor;
         float deltaR = mMap.getParent().red(mCoreColor) - mMap.getParent().red(mBaseColor);
         float deltaG = mMap.getParent().green(mCoreColor) - mMap.getParent().green(mBaseColor);

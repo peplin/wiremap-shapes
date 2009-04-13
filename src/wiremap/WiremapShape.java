@@ -9,16 +9,16 @@ public abstract class WiremapShape {
         setBaseColor(baseColor);
     }
 
-    protected int translateProcessingXToWiremapX(int x) {
-        return (int)(x / (float)mMap.getParent().width * mMap.getMaplineLength() 
-                - (mMap.getMaplineLength() / 2));
+    protected float translateProcessingXToWiremapX(float x) {
+        return x / (float)mMap.getParent().width * mMap.getMaplineLength() 
+                - (mMap.getMaplineLength() / 2);
     }
 
-    protected int translateProcessingYToWiremapY(int y) {
-        return (int)(y / (float)mMap.getParent().height * mMap.getHeight());
+    protected float translateProcessingYToWiremapY(float y) {
+        return y / (float)mMap.getParent().height * mMap.getHeight();
     }
 
-    protected int translateProcessingZToWiremapZ(int z) {
+    protected float translateProcessingZToWiremapZ(float z) {
         return mMap.getDepth() - z;
     }
 

@@ -18,6 +18,7 @@ public class Wiremap {
     private int mPixelsPerWire;
     private int mPixelsPerInch;
     private int mMaximumDepth;
+    private float mFieldDepth;
 
     private int[] mWireDepths;
     private int[] mWireX;
@@ -42,7 +43,7 @@ public class Wiremap {
         }
     }
 
-    public Wiremap(PApplet parent, int wireCount, int depth,
+    public Wiremap(PApplet parent, int wireCount, int depth, int fieldDepth,
             int height, int mapline, double depthUnit, double maplineUnit,
             int pixelsPerWire, String wireDepthsFile) {
         mParent = parent;
@@ -57,6 +58,7 @@ public class Wiremap {
         mWireDepths = new int[mWireCount];
         mWireX = new int[mWireCount];
         mWireZ = new int[mWireCount];
+        mFieldDepth = fieldDepth;
         loadDepths(wireDepthsFile);
     }
 
@@ -98,6 +100,10 @@ public class Wiremap {
     
     public int getMaximumDepth() {
         return mMaximumDepth;
+    }
+    
+    public float getFieldDepth() {
+        return mFieldDepth;
     }
     
     public int getWireDepth(int wire) {

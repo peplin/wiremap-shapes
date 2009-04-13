@@ -7,7 +7,7 @@ WiremapSliver sliver;
 void setup() {
     size(1024, 768);
 
-    map = new Wiremap(this, 256, 90, 36, 48, .1875, .1875, 3,
+    map = new Wiremap(this, 256, 90, 36, 36, 48, .1875, .1875, 3,
             "depth256.txt");
 
     sliver = new WiremapSliver(map, 0, 200, color(265, 120, 45),

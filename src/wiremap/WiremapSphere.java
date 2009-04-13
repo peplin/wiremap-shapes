@@ -1,13 +1,13 @@
 package wiremap;
 
 public class WiremapSphere extends WiremapPositionedShape {
-    protected int mRadius;
+    protected float mRadius;
 
     /**
      * z >= 0, z <= mDepthThickness
      */
-    public WiremapSphere(Wiremap map, int x, int y, int z, int baseColor,
-            int radius) {
+    public WiremapSphere(Wiremap map, float x, float y, float z, int baseColor,
+            float radius) {
         super(map, x, y, z, baseColor);
         setRadius(radius);
     }
@@ -53,7 +53,7 @@ public class WiremapSphere extends WiremapPositionedShape {
         }
     }
 
-    public void setRadius(int radius) {
+    public void setRadius(float radius) {
         mRadius = radius;
     }
 }
