@@ -19,6 +19,7 @@ public class Wiremap {
     private int mPixelsPerInch;
     private int mMaximumDepth;
     private float mFieldDepth;
+    private boolean mSimulation = false;
 
     private int[] mWireDepths;
     private int[] mWireX;
@@ -60,6 +61,14 @@ public class Wiremap {
         mWireZ = new int[mWireCount];
         mFieldDepth = fieldDepth;
         loadDepths(wireDepthsFile);
+    }
+    
+    public void setSimulator(boolean simulation) {
+        mSimulation = simulation;
+    }
+    
+    public boolean isSimulation() {
+        return mSimulation;
     }
 
     public PApplet getParent() {

@@ -1,6 +1,5 @@
 package wiremap;
 
-
 public class WiremapSliver extends WiremapShape {
     private int mWire;
     private int mStartingHeight; // these coords are in Processing format
@@ -29,6 +28,12 @@ public class WiremapSliver extends WiremapShape {
                 mStartingHeight,
                 mMap.getPixelsPerWire(),
                 mCapHeight);
+
+        if(mMap.isSimulation()) {
+            mMap.getParent().translate(0,
+                    0,
+                    mMap.getMaximumDepth() - mMap.getWireDepth(mWire));
+        }
 
         // bottom dot for sliver
         mMap.getParent().rect(left,

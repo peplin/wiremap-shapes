@@ -5,7 +5,7 @@ Wiremap map;
 WiremapGlowingSphere glowingSphere;
 
 void setup() {
-    size(1024, 768);
+    size(1024, 768, P3D);
 
     map = new Wiremap(this, 256, 90, 36, 36, 48, .1875, .1875, 4,
             "depth256.txt");
@@ -18,7 +18,7 @@ void setup() {
 void draw() {
     background(0);
    
-    glowingSphere.setPosition(mouseX, 300, (int)map(mouseY, 0, 768, 0, 20));
+    glowingSphere.setPosition(mouseX, 300, map(mouseY, 0, 768, 0, 36));
     glowingSphere.display();
 }
 
