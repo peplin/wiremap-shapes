@@ -25,9 +25,18 @@ public class WiremapRectangle extends WiremapPositionedShape {
             if(mMap.getWireDepth(i) >= 0
                     && (mMap.getWireX(i) >= (mX - mWidth / 2))
                     && (mMap.getWireX(i) <= (mX + mWidth / 2))) {
-                double distanceToCenter =
+                double distanceToCenter;
+                if(mMap.getWireZ(i) < mZ) {
+                    distanceToCenter =
+                            Math.sqrt(Math.pow(mMap.getWireX(i) - mX, 2)
+                                    + Math.pow(mMap.getWireZ(i)
+                                            + mMap.getDepthUnit() / 2 - mZ, 2));
+                } else {
+                    distanceToCenter =
                         Math.sqrt(Math.pow(mMap.getWireX(i) - mX, 2)
-                                + Math.pow(mMap.getWireZ(i) - mZ, 2));
+                                + Math.pow(mMap.getWireZ(i)
+                                        - mMap.getDepthUnit() / 2 - mZ, 2));
+                }
                 if(distanceToCenter <= mDepth / 2) {
                     double yMinProjection =
                             (mY + mHeight / 2) * mMap.getDepth()

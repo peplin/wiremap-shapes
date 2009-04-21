@@ -118,4 +118,8 @@ public class Wiremap {
     public int getWireDepth(int wire) {
         return mWireDepths[wire];
     }
+
+    public double getDepthUnit() {
+        return mDepthUnit;
+    }
 }
