@@ -1,0 +1,15 @@
+Inspired by the [Wiremap project](http://wiremap.phedhex.com), and based on the
+source code provided by that project's creator.
+
+This library condenses the code examples provided by the Wiremap creator into a
+simple, maintainable library for creating shapes in the field of a Wiremap.
+
+This library was originally created for use at the University of Michigan for
+the August 23, 1966 project, a GROCS (Grant Opportunities for Collaborative
+Spaces) group.
+
+[Wiremap Project](http://wiremap.phedhex.com)
+
+[August 23, 1966 Project](http://august231966.com)
+
+[University of Michigan - GROCS](http://www.dc.umich.edu/grocs)
